@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Papi Launcher es un launcher de Minecraft de código abierto enfocado en privacidad, personalización y facilidad de uso."
+    />
+    <title>Papi Launcher</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header" id="top">
+      <nav class="nav" aria-label="Navegacion principal">
+        <a class="nav-brand" href="#top" aria-label="Papi Launcher inicio">
+          <img src="assets/icon.png" alt="Papi Launcher" />
+          <span class="nav-brand-name">Papi Launcher</span>
+        </a>
+
+        <button class="nav-toggle" type="button" aria-label="Abrir menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <div class="nav-links" data-nav-links>
+          <a href="#">Descargar</a>
+          <a href="#caracteristicas">Características</a>
+          <a href="#" data-open-social>Sociales</a>
+          <a href="#">GitHub</a>
+          <a href="#">Discord</a>
+          <a href="#">YouTube</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+          <div class="hero-badge">Open source Minecraft launcher</div>
+          <h1 class="hero-logo-text" id="hero-title">
+            <span class="hero-logo-papi">PAPI</span>
+            <span class="hero-logo-launcher">LAUNCHER</span>
+          </h1>
+          <p>
+            Papi Launcher es un launcher de Minecraft de código abierto enfocado en la
+            privacidad, la personalización y la facilidad de uso.
+          </p>
+          <div class="hero-actions" aria-label="Acciones principales">
+            <a class="button button-primary" href="#">Descargar</a>
+            <a class="button button-secondary" href="#">GitHub</a>
+          </div>
+        </div>
+
+        <a class="scroll-cue" href="#vista-previa" aria-label="Ir a vista previa">
+          <span></span>
+        </a>
+      </section>
+
+      <section class="section launcher-preview" id="vista-previa" aria-labelledby="preview-title">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Vista previa del Launcher</p>
+          <h2 id="preview-title">Así se ve PapiLauncher</h2>
+        </div>
+
+        <div class="preview-shell reveal">
+          <div class="preview-window">
+            <img
+              class="preview-image"
+              src="assets/launcher-preview.png"
+              alt="Captura de pantalla de la interfaz de PapiLauncher"
+            />
+          </div>
+        </div>
+
+        <p class="preview-description reveal">
+          Interfaz moderna, intuitiva y diseñada para que pases menos tiempo
+          configurando y más tiempo jugando.
+        </p>
+
+        <div class="preview-pills reveal" aria-label="Puntos destacados del launcher">
+          <span>⚡ Inicio rápido</span>
+          <span>📦 Gestión de instancias</span>
+          <span>📂 Sistema de contenedores</span>
+          <span>🧩 Soporte para mods</span>
+        </div>
+      </section>
+
+      <section class="section features" id="caracteristicas" aria-labelledby="features-title">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Características</p>
+          <h2 id="features-title">Control, privacidad y mods en un solo launcher.</h2>
+          <p>
+            Papi Launcher busca ofrecer la facilidad de uso de TLauncher, pero sin
+            publicidad invasiva, sin telemetría innecesaria y con mayor transparencia
+            gracias a su código abierto.
+          </p>
+        </div>
+
+        <div class="card-grid">
+          <article class="feature-card reveal">
+            <span class="card-icon">OS</span>
+            <h3>Código Abierto</h3>
+            <p>Código auditable y transparente para que la comunidad pueda revisar, mejorar y confiar.</p>
+          </article>
+          <article class="feature-card reveal">
+            <span class="card-icon">PR</span>
+            <h3>Enfoque en la Privacidad</h3>
+            <p>Sin telemetría innecesaria y con decisiones pensadas para proteger tus datos.</p>
+          </article>
+          <article class="feature-card reveal">
+            <span class="card-icon">AD</span>
+            <h3>Sin Anuncios</h3>
+            <p>Una experiencia limpia, directa y sin publicidad invasiva al iniciar tus partidas.</p>
+          </article>
+          <article class="feature-card reveal">
+            <span class="card-icon">MC</span>
+            <h3>Soporte para Cuentas de Minecraft</h3>
+            <p>Compatible con cuentas Microsoft y cuentas locales, con mas opciones planificadas.</p>
+          </article>
+          <article class="feature-card reveal">
+            <span class="card-icon">FX</span>
+            <h3>Compatibilidad con Forge, Fabric y NeoForge</h3>
+            <p>Gestiona versiones Vanilla y modloaders populares con base en OpenLauncher.</p>
+          </article>
+          <article class="feature-card reveal">
+            <span class="card-icon">IN</span>
+            <h3>Perfiles e Instancias Personalizadas</h3>
+            <p>Separa configuraciones, mods y mundos para mantener cada experiencia ordenada.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section updates" aria-labelledby="updates-title">
+        <div class="section-heading compact reveal">
+          <p class="eyebrow">Desarrollo</p>
+          <h2 id="updates-title">Novedades del desarrollo</h2>
+        </div>
+
+        <div class="update-grid">
+          <article class="update-card reveal">
+            <p class="update-number">01</p>
+            <h3>Correccion de errores</h3>
+            <p>Ajustes continuos para mejorar estabilidad, arranque y gestión de versiones.</p>
+          </article>
+          <article class="update-card reveal">
+            <p class="update-number">02</p>
+            <h3>Funcionalidad de contenedores añadida</h3>
+            <p>Trabajo en aislamiento de entornos para instalaciones más organizadas y flexibles.</p>
+          </article>
+          <article class="update-card reveal">
+            <p class="update-number">03</p>
+            <h3>Mejoras visuales e interfaz</h3>
+            <p>Interfaz moderna desarrollada con JavaFX, enfocada en claridad y uso diario.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section faq" aria-labelledby="faq-title">
+        <div class="section-heading compact reveal">
+          <p class="eyebrow">FAQ</p>
+          <h2 id="faq-title">Preguntas frecuentes</h2>
+        </div>
+
+        <div class="faq-list">
+          <article class="faq-item reveal">
+            <h3>¿Es gratis?</h3>
+            <p>Sí, Papi Launcher es un proyecto de código abierto pensado para la comunidad.</p>
+          </article>
+          <article class="faq-item reveal">
+            <h3>¿Funciona en Windows?</h3>
+            <p>Sí, el launcher está pensado para funcionar en Windows.</p>
+          </article>
+          <article class="faq-item reveal">
+            <h3>¿Puedo usar mods?</h3>
+            <p>Sí, incluye compatibilidad con Forge, Fabric y NeoForge para gestionar experiencias con mods.</p>
+          </article>
+          <article class="faq-item reveal">
+            <h3>¿Necesito Minecraft Premium?</h3>
+            <p>No, no es necesario tener una cuenta premium de Minecraft para usar el launcher, tristemente aun no puedes poner cuentas de microsoft ¡Pero estamos trabajando en ello!</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <section class="social-overlay" id="social-section" aria-hidden="true">
+      <div class="social-overlay-inner">
+        <button class="social-close" data-close-social aria-label="Cerrar">&times;</button>
+
+        <div class="social-lang">
+          <button onclick="socialIdioma('es')" id="s-btn-es" class="social-lang-btn active">🇪🇸 ES</button>
+          <button onclick="socialIdioma('en')" id="s-btn-en" class="social-lang-btn">🇬🇧 EN</button>
+        </div>
+
+        <h2 class="social-title" id="s-title">🚀 Únete a la Comunidad</h2>
+
+        <div class="social-grid">
+          <div class="social-card">
+            <img src="assets/icon-og.png" alt="Papi Launcher" class="social-card-img" />
+            <h3 id="s-papi-title">Papi Launcher</h3>
+            <p class="social-card-sub" id="s-papi-sub">Servidor Oficial de Discord</p>
+            <button onclick="window.open('https://discord.gg/xvHtwE7QUv', '_blank')" class="social-btn discord-btn" id="s-papi-btn">
+              Unirse al Servidor de Discord
+            </button>
+            <button onclick="copiarSocialLink('https://discord.gg/xvHtwE7QUv')" class="social-btn copy-btn" id="s-copy1">
+              📋 Copiar Link
+            </button>
+          </div>
+
+          <div class="social-card">
+            <img src="assets/icon-HMCL.png" alt="HMCL" class="social-card-img" />
+            <h3 id="s-hmcl-title">Chat de Grupo HMCL</h3>
+            <p class="social-card-sub" id="s-hmcl-sub">Foro / Grupo en Bilibili</p>
+            <button onclick="window.open('https://www.bilibili.com/opus/905435541874409529', '_blank')" class="social-btn hmcl-btn" id="s-hmcl-btn">
+              Entrar al Chat de HMCL
+            </button>
+            <button onclick="copiarSocialLink('https://www.bilibili.com/opus/905435541874409529')" class="social-btn copy-btn" id="s-copy2">
+              📋 Copiar Link
+            </button>
+          </div>
+        </div>
+
+        <p class="social-footer" id="s-footer">
+          Haz clic en los botones para unirte directamente<br>
+          o copia los enlaces para compartirlos.
+        </p>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        <a href="#top" class="footer-brand">
+          <img src="assets/icon.png" alt="" />
+          <span>Papi Launcher</span>
+        </a>
+        <div class="footer-links">
+          <a href="#">GitHub</a>
+          <a href="#">Discord</a>
+          <a href="#">YouTube</a>
+        </div>
+        <p>&copy; <span id="year"></span> Papi Launcher. Código abierto para la comunidad.</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
