@@ -28,12 +28,16 @@
         </button>
 
         <div class="nav-links" data-nav-links>
-          <a href="#">Descargar</a>
-          <a href="#caracteristicas">Características</a>
-          <a href="#" data-open-social>Sociales</a>
-          <a href="#">GitHub</a>
-          <a href="#">Discord</a>
-          <a href="#">YouTube</a>
+          <a href="#" data-open-download data-i18n="navDownload">Descargar</a>
+          <a href="#caracteristicas" data-i18n="navFeatures">Características</a>
+          <a href="#" data-open-docs data-i18n="navDocs">Docs</a>
+          <a href="#" data-open-social data-i18n="navSocial">Sociales</a>
+          <a href="https://github.com/endersan17/papi-launcher" target="_blank">GitHub</a>
+          <a href="https://discord.gg/xvHtwE7QUv" target="_blank">Discord</a>
+          <a href="https://www.youtube.com/@papilauncher" target="_blank">YouTube</a>
+          <button class="lang-toggle" id="lang-toggle" aria-label="Cambiar idioma">
+            <span class="lang-code" id="lang-code">ES</span>
+          </button>
         </div>
       </nav>
     </header>
@@ -42,18 +46,24 @@
       <section class="hero" aria-labelledby="hero-title">
         <div class="hero-overlay"></div>
         <div class="hero-content">
-          <div class="hero-badge">Open source Minecraft launcher</div>
+          <div class="hero-badge" data-i18n="heroBadge">Fork open-source de HMCL</div>
           <h1 class="hero-logo-text" id="hero-title">
             <span class="hero-logo-papi">PAPI</span>
             <span class="hero-logo-launcher">LAUNCHER</span>
           </h1>
-          <p>
-            Papi Launcher es un launcher de Minecraft de código abierto enfocado en la
-            privacidad, la personalización y la facilidad de uso.
+          <p data-i18n="heroDesc">
+            Un launcher de Minecraft moderno, hermoso y potente.<br>
+            Fork open-source de HMCL con interfaz renovada, sistema de temas
+            neón y contenedores inteligentes.
           </p>
           <div class="hero-actions" aria-label="Acciones principales">
-            <a class="button button-primary" href="#">Descargar</a>
-            <a class="button button-secondary" href="#">GitHub</a>
+            <a class="button button-primary" href="#" data-open-download data-i18n="downloadBtn">Descargar</a>
+            <a class="button button-secondary" href="https://github.com/endersan17/papi-launcher" target="_blank" data-i18n="githubBtn">GitHub</a>
+          </div>
+          <div class="hero-pills">
+            <span data-i18n="heroPill1">🎮 Juega sin cuenta Microsoft</span>
+            <span data-i18n="heroPill2">🌙 Tema oscuro glassmorphism</span>
+            <span data-i18n="heroPill3">📦 Contenedores</span>
           </div>
         </div>
 
@@ -64,8 +74,8 @@
 
       <section class="section launcher-preview" id="vista-previa" aria-labelledby="preview-title">
         <div class="section-heading reveal">
-          <p class="eyebrow">Vista previa del Launcher</p>
-          <h2 id="preview-title">Así se ve PapiLauncher</h2>
+          <p class="eyebrow" data-i18n="previewEyebrow">Vista previa del Launcher</p>
+          <h2 id="preview-title" data-i18n="previewTitle">Así se ve PapiLauncher</h2>
         </div>
 
         <div class="preview-shell reveal">
@@ -78,68 +88,88 @@
           </div>
         </div>
 
-        <p class="preview-description reveal">
+        <p class="preview-description reveal" data-i18n="previewDesc">
           Interfaz moderna, intuitiva y diseñada para que pases menos tiempo
           configurando y más tiempo jugando.
         </p>
 
         <div class="preview-pills reveal" aria-label="Puntos destacados del launcher">
-          <span>⚡ Inicio rápido</span>
-          <span>📦 Gestión de instancias</span>
-          <span>📂 Sistema de contenedores</span>
-          <span>🧩 Soporte para mods</span>
+          <span data-i18n="previewPill1">⚡ Inicio rápido</span>
+          <span data-i18n="previewPill2">📦 Gestión de instancias</span>
+          <span data-i18n="previewPill3">📂 Sistema de contenedores</span>
+          <span data-i18n="previewPill4">🧩 Soporte para mods</span>
+        </div>
+      </section>
+
+      <section class="section description" aria-labelledby="desc-title">
+        <div class="section-heading reveal">
+          <p class="eyebrow" data-i18n="descEyebrow">Acerca de PAPI LAUNCHER</p>
+          <h2 id="desc-title" data-i18n="descTitle">Un fork con identidad propia</h2>
+        </div>
+        <div class="desc-content reveal">
+          <p data-i18n="descText">
+            PAPI LAUNCHER es un launcher de Minecraft de <strong>código abierto (GPL v3)</strong>
+            basado en <strong>Hello Minecraft! Launcher (HMCL)</strong> creado por <strong>huangyuhui</strong>.
+            Mantenido por <strong>endersan17</strong>, este fork se enfoca en:
+          </p>
+          <div class="desc-grid">
+            <div class="desc-item" data-i18n="descItem1">🎨 Interfaz moderna con <strong>6 temas neón</strong> personalizables</div>
+            <div class="desc-item" data-i18n="descItem2">📦 Sistema de <strong>contenedores</strong> para organizar mods, resource packs, shaders y mundos</div>
+            <div class="desc-item" data-i18n="descItem3">🚀 Modo <strong>offline</strong> activado por defecto (sin registros)</div>
+            <div class="desc-item" data-i18n="descItem4">🔄 <strong>Actualizaciones automáticas</strong> desde GitHub</div>
+            <div class="desc-item" data-i18n="descItem5">🎮 <strong>Discord Rich Presence</strong> integrado</div>
+          </div>
         </div>
       </section>
 
       <section class="section features" id="caracteristicas" aria-labelledby="features-title">
         <div class="section-heading reveal">
-          <p class="eyebrow">Características</p>
-          <h2 id="features-title">Control, privacidad y mods en un solo launcher.</h2>
-          <p>
-            Papi Launcher busca ofrecer la facilidad de uso de TLauncher, pero sin
-            publicidad invasiva, sin telemetría innecesaria y con mayor transparencia
-            gracias a su código abierto.
+          <p class="eyebrow" data-i18n="featuresEyebrow">Características</p>
+          <h2 id="features-title" data-i18n="featuresTitle">Todo lo que necesitas en un solo launcher</h2>
+          <p data-i18n="featuresDesc">
+            PAPI LAUNCHER incluye todo lo esencial para una experiencia Minecraft completa,
+            sin publicidad, sin telemetría y con total transparencia.
           </p>
         </div>
 
         <div class="card-grid">
           <article class="feature-card reveal">
-            <span class="card-icon">OS</span>
-            <h3>Código Abierto</h3>
-            <p>Código auditable y transparente para que la comunidad pueda revisar, mejorar y confiar.</p>
+            <span class="card-icon">🎨</span>
+            <h3>6 Temas Neón</h3>
+            <p>Void Green, Blue Launcher, Cyan Pulse, Electric Purple, Magenta Glow y Acid Lime. Todos con efecto glassmorphism.</p>
           </article>
           <article class="feature-card reveal">
-            <span class="card-icon">PR</span>
-            <h3>Enfoque en la Privacidad</h3>
-            <p>Sin telemetría innecesaria y con decisiones pensadas para proteger tus datos.</p>
+            <span class="card-icon">📦</span>
+            <h3>Contenedores Inteligentes</h3>
+            <p>Panel de 3 columnas, búsqueda con debounce, perfiles de lanzamiento por contenedor y validación automática de resource packs.</p>
           </article>
           <article class="feature-card reveal">
-            <span class="card-icon">AD</span>
-            <h3>Sin Anuncios</h3>
-            <p>Una experiencia limpia, directa y sin publicidad invasiva al iniciar tus partidas.</p>
+            <span class="card-icon">🚀</span>
+            <h3>Modo Offline + authlib-injector</h3>
+            <p>Modo offline activado por defecto. Soporte para authlib-injector y cuentas Microsoft próximamente.</p>
           </article>
           <article class="feature-card reveal">
-            <span class="card-icon">MC</span>
-            <h3>Soporte para Cuentas de Minecraft</h3>
-            <p>Compatible con cuentas Microsoft y cuentas locales, con mas opciones planificadas.</p>
+            <span class="card-icon">🖥️</span>
+            <h3>Multi-plataforma</h3>
+            <p>Windows (x86-64, ARM64), Linux (x86-64, ARM64, RISC-V, LoongArch64), macOS (x86-64, ARM64) y FreeBSD.</p>
           </article>
           <article class="feature-card reveal">
-            <span class="card-icon">FX</span>
-            <h3>Compatibilidad con Forge, Fabric y NeoForge</h3>
-            <p>Gestiona versiones Vanilla y modloaders populares con base en OpenLauncher.</p>
+            <span class="card-icon">🌍</span>
+            <h3>Multi-idioma</h3>
+            <p>Inglés, Español, Chino, Japonés, Ruso, Ucraniano y Chino Clásico. Traducción completa de la interfaz.</p>
           </article>
           <article class="feature-card reveal">
-            <span class="card-icon">IN</span>
-            <h3>Perfiles e Instancias Personalizadas</h3>
-            <p>Separa configuraciones, mods y mundos para mantener cada experiencia ordenada.</p>
+            <span class="card-icon">🔄</span>
+            <h3>Auto-Update + Discord RP</h3>
+            <p>3 canales de actualización (Stable, Beta, Nightly) y Discord Rich Presence integrado para mostrar qué juegas.</p>
           </article>
         </div>
       </section>
 
       <section class="section updates" aria-labelledby="updates-title">
         <div class="section-heading compact reveal">
-          <p class="eyebrow">Desarrollo</p>
-          <h2 id="updates-title">Novedades del desarrollo</h2>
+          <p class="eyebrow" data-i18n="updateEyebrow">Desarrollo</p>
+          <h2 id="updates-title" data-i18n="updateTitle">Novedades del desarrollo</h2>
         </div>
 
         <div class="update-grid">
@@ -161,10 +191,94 @@
         </div>
       </section>
 
+      <section class="section architecture" aria-labelledby="arch-title">
+        <div class="section-heading reveal">
+          <p class="eyebrow" data-i18n="archEyebrow">Arquitectura Técnica</p>
+          <h2 id="arch-title" data-i18n="archTitle">Cómo está construido</h2>
+        </div>
+
+        <div class="arch-modules reveal">
+          <div class="arch-module">
+            <h3>1. HMCLBoot</h3>
+            <p class="arch-meta">Bootstrap loader (Java 8 compatible)</p>
+            <ul>
+              <li>Carga el launcher principal</li>
+              <li>Verifica versión de Java (mínimo 11)</li>
+              <li>Muestra splash screen</li>
+            </ul>
+          </div>
+          <div class="arch-module">
+            <h3>2. HMCLCore</h3>
+            <p class="arch-meta">Librería central</p>
+            <ul>
+              <li>Auth (Microsoft, offline, authlib-injector)</li>
+              <li>Descarga de versiones de Minecraft</li>
+              <li>Lanzamiento del juego</li>
+              <li>Gestión de mods (CurseForge, Modrinth)</li>
+              <li>Utilidades (IO, JSON, red)</li>
+            </ul>
+          </div>
+          <div class="arch-module">
+            <h3>3. HMCL</h3>
+            <p class="arch-meta">Interfaz de usuario (JavaFX)</p>
+            <ul>
+              <li>UI completa con temas y contenedores</li>
+              <li>Sistema de actualización</li>
+              <li>Discord RPC</li>
+              <li>Personalización</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="section-heading reveal" style="margin-top:60px">
+          <p class="eyebrow">Tecnologías</p>
+          <h2>Dependencias principales</h2>
+        </div>
+        <div class="arch-deps reveal">
+          <span>Kotlin + Java</span>
+          <span>JavaFX + JFoenix</span>
+          <span>Gradle (Kotlin DSL)</span>
+          <span>Gson</span>
+          <span>JNA</span>
+          <span>jsoup</span>
+          <span>nanohttpd</span>
+          <span>Discord RPC</span>
+          <span>OpenNBT</span>
+          <span>JUnit 5</span>
+        </div>
+
+      </section>
+
+      <section class="section specs" aria-labelledby="specs-title">
+        <div class="section-heading compact reveal">
+          <p class="eyebrow" data-i18n="specsEyebrow">Especificaciones Técnicas</p>
+          <h2 id="specs-title" data-i18n="specsTitle">Requisitos y Build</h2>
+        </div>
+        <div class="specs-grid">
+          <div class="specs-card reveal">
+            <h3>⚙️ Requisitos Mínimos</h3>
+            <ul>
+              <li><strong>Java:</strong> 11 (mínimo) / 17 (recomendado) / 21 (ideal)</li>
+              <li><strong>Sistema:</strong> Windows, Linux, macOS o FreeBSD</li>
+              <li><strong>Arquitectura:</strong> x86-64, ARM64, RISC-V, LoongArch64</li>
+            </ul>
+          </div>
+          <div class="specs-card reveal">
+            <h3>📦 Build</h3>
+            <ul>
+              <li><strong>Lenguaje:</strong> Kotlin + Java</li>
+              <li><strong>Build:</strong> Gradle (Kotlin DSL)</li>
+              <li><strong>UI:</strong> JavaFX + JFoenix</li>
+              <li><strong>Output:</strong> papi-launcher-&lt;version&gt;.jar</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
       <section class="section faq" aria-labelledby="faq-title">
         <div class="section-heading compact reveal">
-          <p class="eyebrow">FAQ</p>
-          <h2 id="faq-title">Preguntas frecuentes</h2>
+          <p class="eyebrow" data-i18n="faqEyebrow">FAQ</p>
+          <h2 id="faq-title" data-i18n="faqTitle">Preguntas frecuentes</h2>
         </div>
 
         <div class="faq-list">
@@ -186,49 +300,496 @@
           </article>
         </div>
       </section>
+
+      <section class="section links-section" aria-labelledby="links-title">
+        <div class="section-heading compact reveal">
+          <p class="eyebrow" data-i18n="linksEyebrow">Enlaces</p>
+          <h2 id="links-title" data-i18n="linksTitle">Conéctate con la comunidad</h2>
+        </div>
+        <div class="links-grid reveal">
+          <a href="https://github.com/endersan17/papi-launcher" target="_blank" class="links-card">
+            <span>🔗</span>
+            <span>GitHub</span>
+            <span>github.com/endersan17/papi-launcher</span>
+          </a>
+          <a href="https://discord.gg/xvHtwE7QUv" target="_blank" class="links-card">
+            <span>💬</span>
+            <span>Discord</span>
+            <span>discord.gg/xvHtwE7QUv</span>
+          </a>
+          <a href="https://github.com/endersan17/papi-launcher/issues" target="_blank" class="links-card">
+            <span>🐛</span>
+            <span>Issues</span>
+            <span>Reporta bugs o sugiere mejoras</span>
+          </a>
+          <a href="https://github.com/endersan17" target="_blank" class="links-card">
+            <span>👤</span>
+            <span>Autor</span>
+            <span>endersan17</span>
+          </a>
+        </div>
+      </section>
+
+      <section class="section credits" aria-labelledby="credits-title">
+        <div class="section-heading compact reveal">
+          <p class="eyebrow" data-i18n="creditsEyebrow">Agradecimientos</p>
+          <h2 id="credits-title" data-i18n="creditsTitle">Hecho gracias a</h2>
+        </div>
+        <div class="credits-content reveal">
+          <p>
+            <strong>endersan17</strong> — Creador del fork PAPI LAUNCHER<br>
+            <strong>huanghongxun</strong> — Creador original de HMCL<br>
+            <strong>SoyStormy</strong> — Contribuidor y beta tester principal<br>
+            <strong>Todos los contribuidores de HMCL</strong>
+          </p>
+          <p class="credits-license">Licencia: GPL v3</p>
+        </div>
+      </section>
     </main>
+
+    <section class="download-overlay" id="download-section" aria-hidden="true">
+      <div class="download-overlay-inner">
+        <button class="download-close" data-close-download aria-label="Cerrar">&times;</button>
+
+        <p class="eyebrow" data-i18n="downloadEyebrow">Selecciona tu plataforma</p>
+        <h2 class="download-title" data-i18n="downloadTitle">Descargar PAPI LAUNCHER</h2>
+        <p class="download-desc" data-i18n="downloadDesc">Elige la versión que corresponde a tu sistema operativo.</p>
+
+        <div class="download-grid">
+          <div class="download-card">
+            <div class="download-card-icon">
+              <img src="assets/Logo_Windows_11.webp" alt="Windows" />
+            </div>
+            <h3 data-i18n="dlWindowsTitle">Windows</h3>
+            <p class="download-card-sub" data-i18n="dlWindowsSub">Instalador .exe</p>
+            <a href="assets/oficial/papi-launcher-1.0.0.exe" download class="download-btn win-btn" data-i18n="dlWindowsBtn">
+              Descargar .exe
+            </a>
+          </div>
+
+          <div class="download-card">
+            <div class="download-card-icon download-card-icon-double">
+              <img src="assets/linux_logo.png" alt="Linux" />
+              <img src="assets/Apple-logo.png" alt="macOS" />
+            </div>
+            <h3 data-i18n="dlLinuxMacTitle">Linux / macOS</h3>
+            <p class="download-card-sub" data-i18n="dlLinuxMacSub">Script .sh</p>
+            <a href="assets/oficial/papi-launcher-1.0.0.sh" download class="download-btn linux-btn" data-i18n="dlLinuxMacBtn">
+              Descargar .sh
+            </a>
+          </div>
+
+          <div class="download-card">
+            <div class="download-card-icon">
+              <img src="assets/java_logo.png" alt="Java" />
+            </div>
+            <h3 data-i18n="dlJarTitle">Global</h3>
+            <p class="download-card-sub" data-i18n="dlJarSub">Universal .jar (Java)</p>
+            <a href="assets/oficial/papi-launcher-1.0.0.jar" download class="download-btn jar-btn" data-i18n="dlJarBtn">
+              Descargar .jar
+            </a>
+          </div>
+        </div>
+
+        <p class="download-footer" data-i18n="downloadFooter">
+          ¿No sabes cuál elegir? Si tienes Java instalado, el .jar funciona en cualquier sistema operativo.
+        </p>
+      </div>
+    </section>
 
     <section class="social-overlay" id="social-section" aria-hidden="true">
       <div class="social-overlay-inner">
         <button class="social-close" data-close-social aria-label="Cerrar">&times;</button>
 
-        <div class="social-lang">
-          <button onclick="socialIdioma('es')" id="s-btn-es" class="social-lang-btn active">🇪🇸 ES</button>
-          <button onclick="socialIdioma('en')" id="s-btn-en" class="social-lang-btn">🇬🇧 EN</button>
-        </div>
-
-        <h2 class="social-title" id="s-title">🚀 Únete a la Comunidad</h2>
+        <h2 class="social-title" id="s-title" data-i18n="socialTitle">🚀 Únete a la Comunidad</h2>
 
         <div class="social-grid">
           <div class="social-card">
             <img src="assets/icon-og.png" alt="Papi Launcher" class="social-card-img" />
-            <h3 id="s-papi-title">Papi Launcher</h3>
-            <p class="social-card-sub" id="s-papi-sub">Servidor Oficial de Discord</p>
-            <button onclick="window.open('https://discord.gg/xvHtwE7QUv', '_blank')" class="social-btn discord-btn" id="s-papi-btn">
+            <h3 id="s-papi-title" data-i18n="sPapiTitle">Papi Launcher</h3>
+            <p class="social-card-sub" id="s-papi-sub" data-i18n="sPapiSub">Servidor Oficial de Discord</p>
+            <button onclick="window.open('https://discord.gg/xvHtwE7QUv', '_blank')" class="social-btn discord-btn" id="s-papi-btn" data-i18n="sPapiBtn">
               Unirse al Servidor de Discord
             </button>
-            <button onclick="copiarSocialLink('https://discord.gg/xvHtwE7QUv')" class="social-btn copy-btn" id="s-copy1">
+            <button onclick="copiarSocialLink('https://discord.gg/xvHtwE7QUv')" class="social-btn copy-btn" id="s-copy1" data-i18n="sCopy">
               📋 Copiar Link
             </button>
           </div>
 
           <div class="social-card">
             <img src="assets/icon-HMCL.png" alt="HMCL" class="social-card-img" />
-            <h3 id="s-hmcl-title">Chat de Grupo HMCL</h3>
-            <p class="social-card-sub" id="s-hmcl-sub">Foro / Grupo en Bilibili</p>
-            <button onclick="window.open('https://www.bilibili.com/opus/905435541874409529', '_blank')" class="social-btn hmcl-btn" id="s-hmcl-btn">
+            <h3 id="s-hmcl-title" data-i18n="sHmclTitle">Chat de Grupo HMCL</h3>
+            <p class="social-card-sub" id="s-hmcl-sub" data-i18n="sHmclSub">Foro / Grupo en Bilibili</p>
+            <button onclick="window.open('https://www.bilibili.com/opus/905435541874409529', '_blank')" class="social-btn hmcl-btn" id="s-hmcl-btn" data-i18n="sHmclBtn">
               Entrar al Chat de HMCL
             </button>
-            <button onclick="copiarSocialLink('https://www.bilibili.com/opus/905435541874409529')" class="social-btn copy-btn" id="s-copy2">
+            <button onclick="copiarSocialLink('https://www.bilibili.com/opus/905435541874409529')" class="social-btn copy-btn" id="s-copy2" data-i18n="sCopy">
               📋 Copiar Link
             </button>
           </div>
         </div>
 
-        <p class="social-footer" id="s-footer">
+        <p class="social-footer" id="s-footer" data-i18n="sFooter">
           Haz clic en los botones para unirte directamente<br>
           o copia los enlaces para compartirlos.
         </p>
+      </div>
+    </section>
+
+    <section class="docs-overlay" id="docs-section" aria-hidden="true">
+      <div class="docs-overlay-bg"></div>
+      <button class="docs-close" data-close-docs aria-label="Cerrar">&times;</button>
+
+      <div class="docs-content">
+        <div class="docs-hero">
+          <div class="docs-badge">Official Documentation</div>
+          <h1 class="docs-logo-text">
+            <span class="docs-logo-papi">PAPI</span>
+            <span class="docs-logo-launcher">DOCS</span>
+          </h1>
+          <p class="docs-desc" data-i18n="docsDesc">
+            Bienvenido a la documentación de PAPI LAUNCHER, un launcher de Minecraft
+            moderno, hermoso y potente basado en HMCL.
+          </p>
+          <div class="docs-actions">
+            <a class="button button-primary" href="#" data-scroll-guias data-i18n="docsVerGuias">Ver Guías</a>
+            <a class="button button-secondary" href="https://docs.hmcl.net/help.html" target="_blank" data-i18n="docsHmclHelp">Documentación HMCL</a>
+            <a class="button button-secondary" href="https://github.com/endersan17/papi-launcher" target="_blank">GitHub</a>
+          </div>
+        </div>
+
+        <div class="docs-index reveal">
+          <h3 data-i18n="docsIndex">📑 Índice</h3>
+          <div class="docs-index-links">
+            <a href="#guias" data-i18n="docsPrimerosPasos">Primeros Pasos</a>
+            <a href="#tutorial-cuenta" data-i18n="docsTutorialCuenta">Crear una cuenta offline</a>
+            <a href="#tutorial-descargar" data-i18n="docsTutorialDescargar">Descargar Minecraft</a>
+            <a href="#tutorial-temas" data-i18n="docsTutorialTemas">Cambiar tema y apariencia</a>
+            <a href="#docs-contenedores" data-i18n="docsContenedores">Sistema de Contenedores</a>
+            <a href="#docs-mods" data-i18n="docsMods">Instalar Mods</a>
+            <a href="#docs-temas" data-i18n="docsTemas">Sistema de Temas</a>
+            <a href="#docs-actualizaciones" data-i18n="docsActualizaciones">Actualizaciones</a>
+            <a href="#docs-modpacks" data-i18n="docsModpacks">Modpacks</a>
+            <a href="#docs-cuentas" data-i18n="docsCuentas">Cuentas</a>
+            <a href="#docs-plataformas" data-i18n="docsPlataformas">Plataformas</a>
+          </div>
+        </div>
+
+        <section class="section" id="guias">
+          <div class="section-heading reveal">
+            <p class="eyebrow" data-i18n="docsPrimerosPasos">Primeros Pasos</p>
+            <h2 data-i18n="docsComienza">Comienza con PAPI LAUNCHER</h2>
+          </div>
+          <div class="docs-steps">
+            <div class="docs-step reveal">
+              <span class="docs-step-num">1</span>
+              <div>
+                <h3 data-i18n="docsStep1Title">Descarga</h3>
+                <p data-i18n="docsStep1Desc">Descarga la última versión desde <a href="https://github.com/endersan17/papi-launcher/releases" target="_blank">GitHub Releases</a> — elige <strong>.jar</strong>, <strong>.exe</strong> o <strong>.sh</strong> según tu sistema operativo.</p>
+              </div>
+            </div>
+            <div class="docs-step reveal">
+              <span class="docs-step-num">2</span>
+              <div>
+                <h3 data-i18n="docsStep2Title">Ejecuta</h3>
+                <p data-i18n="docsStep2Desc">Ejecuta el <strong>.jar</strong> (requiere Java 11+), el <strong>.exe</strong> en Windows o el <strong>.sh</strong> en Linux/macOS.</p>
+              </div>
+            </div>
+            <div class="docs-step reveal">
+              <span class="docs-step-num">3</span>
+              <div>
+                <h3 data-i18n="docsStep3Title">Juega</h3>
+                <p data-i18n="docsStep3Desc">Crea una cuenta offline y ¡a jugar!</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section" id="tutorial-cuenta">
+          <div class="section-heading reveal">
+            <p class="eyebrow" data-i18n="docsTutorialCuenta">Crear una cuenta sin conexión</p>
+            <h2 data-i18n="docsTutorialCuenta">Crear una cuenta sin conexión</h2>
+            <p data-i18n="docsTutorialCuentaDesc">Sigue estos pasos para crear una cuenta offline y empezar a jugar sin necesidad de registrarte.</p>
+          </div>
+          <div class="docs-steps">
+            <div class="docs-step reveal">
+              <span class="docs-step-num">1</span>
+              <div>
+                <h3 data-i18n="docsTutorialCuentaStep1">Accede a Cuentas</h3>
+                <p data-i18n="docsTutorialCuentaStep1Desc">Haz clic en la sección <strong>Cuentas</strong> en el menú lateral izquierdo.</p>
+                <img src="assets/tutorial/Jugador.jpg" alt="Menú lateral con flecha señalando Cuentas" class="tutorial-img" />
+              </div>
+            </div>
+            <div class="docs-step reveal">
+              <span class="docs-step-num">2</span>
+              <div>
+                <h3 data-i18n="docsTutorialCuentaStep2">Selecciona Sin conexión</h3>
+                <p data-i18n="docsTutorialCuentaStep2Desc">Selecciona <strong>Añadir cuenta</strong> y elige la opción <strong>Sin conexión</strong>.</p>
+                <img src="assets/tutorial/step 1 account.png" alt="Lista de tipos de cuenta con Sin conexión seleccionado" class="tutorial-img" />
+              </div>
+            </div>
+            <div class="docs-step reveal">
+              <span class="docs-step-num">3</span>
+              <div>
+                <h3 data-i18n="docsTutorialCuentaStep3">Escribe tu nombre</h3>
+                <p data-i18n="docsTutorialCuentaStep3Desc">Ingresa tu nombre de usuario (máximo 16 caracteres, solo letras, números y guiones bajos).</p>
+                <img src="assets/tutorial/no name.png" alt="Formulario de cuenta sin nombre ingresado" class="tutorial-img" />
+              </div>
+            </div>
+            <div class="docs-step reveal">
+              <span class="docs-step-num">4</span>
+              <div>
+                <h3 data-i18n="docsTutorialCuentaStep4">¡Listo!</h3>
+                <p data-i18n="docsTutorialCuentaStep4Desc">Haz clic en <strong>Iniciar sesión</strong> y disfruta. Así se ve con un nombre válido.</p>
+                <img src="assets/tutorial/with name.png" alt="Formulario con nombre de usuario válido ingresado" class="tutorial-img" />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section" id="tutorial-descargar">
+          <div class="section-heading reveal">
+            <p class="eyebrow" data-i18n="docsTutorialDescargar">Descargar Minecraft</p>
+            <h2 data-i18n="docsTutorialDescargar">Descargar Minecraft</h2>
+            <p data-i18n="docsTutorialDescargarDesc">Instala el juego en un solo clic</p>
+          </div>
+          <div class="docs-steps">
+            <div class="docs-step reveal">
+              <span class="docs-step-num">1</span>
+              <div>
+                <h3 data-i18n="docsTutorialDescargarStep1">Ve a Descargar</h3>
+                <p data-i18n="docsTutorialDescargarStep1Desc">Haz clic en <strong>Descargar</strong> en el menú lateral izquierdo.</p>
+                <img src="assets/tutorial/Descargas.jpg" alt="Menú lateral con flecha señalando Descargar" class="tutorial-img" />
+              </div>
+            </div>
+            <div class="docs-step reveal">
+              <span class="docs-step-num">2</span>
+              <div>
+                <h3 data-i18n="docsTutorialDescargarStep2">Elige una versión</h3>
+                <p data-i18n="docsTutorialDescargarStep2Desc">Busca la versión de Minecraft que quieres instalar. Todas las versiones están disponibles.</p>
+                <img src="assets/tutorial/idk another name.png" alt="Lista de versiones de Minecraft disponibles" class="tutorial-img" />
+              </div>
+            </div>
+            <div class="docs-step reveal">
+              <span class="docs-step-num">3</span>
+              <div>
+                <h3 data-i18n="docsTutorialDescargarStep3">Descarga automática</h3>
+                <p data-i18n="docsTutorialDescargarStep3Desc">Selecciona la versión y el launcher la descargará automáticamente. Una vez lista, haz clic en <strong>Jugar</strong>.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section" id="docs-mods">
+          <div class="section-heading reveal">
+            <p class="eyebrow" data-i18n="docsMods">Instalar Mods</p>
+            <h2 data-i18n="docsMods">Añade mods fácilmente</h2>
+            <p data-i18n="docsModsDesc">PAPI LAUNCHER facilita la instalación de mods con soporte para Forge, Fabric y NeoForge.</p>
+          </div>
+          <div class="card-grid">
+            <article class="feature-card reveal">
+              <span class="card-icon">🔧</span>
+              <h3 data-i18n="docsModsCard1">Elige un Modloader</h3>
+              <p data-i18n="docsModsCard1Desc">Selecciona Forge, Fabric o NeoForge al crear un contenedor o perfil. El launcher descargará el modloader automáticamente.</p>
+            </article>
+            <article class="feature-card reveal">
+              <span class="card-icon">📂</span>
+              <h3 data-i18n="docsModsCard2">Agrega tus Mods</h3>
+              <p data-i18n="docsModsCard2Desc">Coloca los archivos .jar en la carpeta de mods de tu contenedor, o usa la opción "Agregar Mod" desde el launcher.</p>
+            </article>
+            <article class="feature-card reveal">
+              <span class="card-icon">📥</span>
+              <h3 data-i18n="docsModsCard3">Importa Modpacks</h3>
+              <p data-i18n="docsModsCard3Desc">Soporta importación de modpacks desde CurseForge (.zip), Modrinth (.mrpack) y MultiMC.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="section" id="tutorial-temas">
+          <div class="section-heading reveal">
+            <p class="eyebrow" data-i18n="docsTutorialTemas">Cambiar tema y apariencia</p>
+            <h2 data-i18n="docsTutorialTemas">Cambiar tema y apariencia</h2>
+            <p data-i18n="docsTutorialTemasDesc">Personaliza el launcher con uno de los 6 temas neón disponibles.</p>
+          </div>
+          <div class="docs-steps">
+            <div class="docs-step reveal">
+              <span class="docs-step-num">1</span>
+              <div>
+                <h3 data-i18n="docsTutorialTemasStep1">Ve a Configuración</h3>
+                <p data-i18n="docsTutorialTemasStep1Desc">Haz clic en <strong>Configuración</strong> en el menú lateral izquierdo.</p>
+                <img src="assets/tutorial/Config.jpg" alt="Menú lateral con flecha señalando Configuración" class="tutorial-img" />
+              </div>
+            </div>
+            <div class="docs-step reveal">
+              <span class="docs-step-num">2</span>
+              <div>
+                <h3 data-i18n="docsTutorialTemasStep2">Configuración Global</h3>
+                <p data-i18n="docsTutorialTemasStep2Desc">Explora las opciones de <strong>Configuración Global</strong> como Java, memoria y resolución de ventana.</p>
+                <img src="assets/tutorial/step 1.jpg" alt="Panel de Configuración Global del launcher" class="tutorial-img" />
+              </div>
+            </div>
+            <div class="docs-step reveal">
+              <span class="docs-step-num">3</span>
+              <div>
+                <h3 data-i18n="docsTutorialTemasStep3">Entra en Apariencia</h3>
+                <p data-i18n="docsTutorialTemasStep3Desc">Haz clic en <strong>Apariencia</strong> para ver los temas disponibles.</p>
+                <img src="assets/tutorial/step 2.png" alt="Sección de Apariencia con temas neón" class="tutorial-img" />
+              </div>
+            </div>
+            <div class="docs-step reveal">
+              <span class="docs-step-num">4</span>
+              <div>
+                <h3 data-i18n="docsTutorialTemasStep4">Selecciona tu tema</h3>
+                <p data-i18n="docsTutorialTemasStep4Desc">Elige entre Void Green, Blue Launcher, Cyan Pulse, Electric Purple, Magenta Glow o Acid Lime.</p>
+                <img src="assets/tutorial/step 3.jpg" alt="Tema Magenta Glow seleccionado con un círculo" class="tutorial-img" />
+              </div>
+            </div>
+            <div class="docs-step reveal">
+              <span class="docs-step-num">5</span>
+              <div>
+                <h3 data-i18n="docsTutorialTemasStep5">¡Tema aplicado!</h3>
+                <p data-i18n="docsTutorialTemasStep5Desc">Así se ve el launcher con el tema Magenta Glow aplicado.</p>
+                <img src="assets/tutorial/final result 1.jpg" alt="Launcher con tema Magenta Glow aplicado" class="tutorial-img" />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section" id="docs-contenedores">
+          <div class="section-heading reveal">
+            <p class="eyebrow" data-i18n="docsContenedores">Sistema de Contenedores</p>
+            <h2 data-i18n="docsContenedores">Organiza tu contenido de Minecraft</h2>
+            <p data-i18n="docsContenedoresDesc">Los contenedores agrupan mods, resource packs, shader packs y mundos para una experiencia de juego organizada.</p>
+          </div>
+
+          <div class="card-grid">
+            <article class="feature-card reveal">
+              <span class="card-icon">+</span>
+              <h3 data-i18n="docsContenedoresCard1">Crear un Contenedor</h3>
+              <p data-i18n="docsContenedoresCard1Desc">Haz clic en "Crear Contenedor", asigna un nombre y descripción, selecciona la versión de Minecraft, agrega mods, resource packs, shaders o mundos.</p>
+            </article>
+            <article class="feature-card reveal">
+              <span class="card-icon">📦</span>
+              <h3 data-i18n="docsContenedoresCard2">Gestión de Contenido</h3>
+              <p data-i18n="docsContenedoresCard2Desc">Mods, Resource Packs con validación automática de pack.mcmeta, Shader Packs y Mundos: todo organizado en un solo lugar.</p>
+            </article>
+            <article class="feature-card reveal">
+              <span class="card-icon">⚙️</span>
+              <h3 data-i18n="docsContenedoresCard3">Perfiles de Lanzamiento</h3>
+              <p data-i18n="docsContenedoresCard3Desc">Cada contenedor puede tener su propio perfil con versión específica, argumentos JVM, resolución, memoria máxima/mínima e IP de servidor.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="section" id="docs-temas">
+          <div class="section-heading reveal">
+            <p class="eyebrow" data-i18n="docsTemas">Sistema de Temas</p>
+            <h2 data-i18n="docsTemasDesc">6 temas neón con glassmorphism</h2>
+          </div>
+          <div class="docs-themes reveal">
+            <div class="docs-theme" style="--theme: #00FF9D"><span>Void Green</span><code>#00FF9D</code></div>
+            <div class="docs-theme" style="--theme: #00AFFF"><span>Blue Launcher</span><code>#00AFFF</code></div>
+            <div class="docs-theme" style="--theme: #00FFEE"><span>Cyan Pulse</span><code>#00FFEE</code></div>
+            <div class="docs-theme" style="--theme: #C300FF"><span>Electric Purple</span><code>#C300FF</code></div>
+            <div class="docs-theme" style="--theme: #FF00AA"><span>Magenta Glow</span><code>#FF00AA</code></div>
+            <div class="docs-theme" style="--theme: #AAFF00"><span>Acid Lime</span><code>#AAFF00</code></div>
+          </div>
+          <p class="docs-theme-note reveal" data-i18n="docsTemasNote">Opacidad del fondo ajustable, imagen de fondo personalizada (local o URL) y fondo por tema. CSS personalizado próximamente.</p>
+          <div class="section-heading reveal" style="margin-top:40px">
+            <p class="eyebrow">Arquitectura CSS</p>
+            <h3 style="font-size:1.6rem" data-i18n="docsCssLayers">6 capas del sistema de temas</h3>
+          </div>
+          <div class="arch-css-layers reveal">
+            <div class="arch-layer"><span>1</span> font.css</div>
+            <div class="arch-layer"><span>2</span> root.css — Tema oscuro base</div>
+            <div class="arch-layer"><span>3</span> papitheme-{color}.css — Variables del tema</div>
+            <div class="arch-layer"><span>4</span> ThemeManager — Opacidad dinámica</div>
+            <div class="arch-layer"><span>5</span> CSS personalizado externo</div>
+            <div class="arch-layer"><span>6</span> Force White — Texto blanco forzado</div>
+          </div>
+        </section>
+
+        <section class="section" id="docs-actualizaciones">
+          <div class="section-heading compact reveal">
+            <p class="eyebrow" data-i18n="docsActualizaciones">Canales de actualización</p>
+            <h2 data-i18n="docsActualizaciones">Canales de actualización</h2>
+          </div>
+          <div class="update-grid">
+            <article class="update-card reveal">
+              <p class="update-number">Stable</p>
+              <h3 data-i18n="docsActualizacionesStable">Recomendado</h3>
+              <p data-i18n="docsActualizacionesStableDesc">Versiones estables para uso diario.</p>
+            </article>
+            <article class="update-card reveal">
+              <p class="update-number">Beta</p>
+              <h3 data-i18n="docsActualizacionesBeta">Experimental</h3>
+              <p data-i18n="docsActualizacionesBetaDesc">Funciones experimentales antes del lanzamiento estable.</p>
+            </article>
+            <article class="update-card reveal">
+              <p class="update-number">Nightly</p>
+              <h3 data-i18n="docsActualizacionesNightly">Inestable</h3>
+              <p data-i18n="docsActualizacionesNightlyDesc">Versión más reciente, puede ser inestable.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="section" id="docs-modpacks">
+          <div class="section-heading reveal">
+            <p class="eyebrow" data-i18n="docsModpacks">Modpacks</p>
+            <h2 data-i18n="docsModpacks">Importación y Exportación</h2>
+          </div>
+          <div class="card-grid">
+            <article class="feature-card reveal">
+              <span class="card-icon">📥</span>
+              <h3 data-i18n="docsModpacksImport">Importar</h3>
+              <p data-i18n="docsModpacksImportDesc">Desde archivo (.zip / .mrpack) o desde un modpack ya instalado. Soporta: CurseForge, Modrinth, MultiMC.</p>
+            </article>
+            <article class="feature-card reveal">
+              <span class="card-icon">📤</span>
+              <h3 data-i18n="docsModpacksExport">Exportar</h3>
+              <p data-i18n="docsModpacksExportDesc">Exporta tu contenedor como archivo .mrpack incluyendo nombre, versión y autor.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="section" id="docs-cuentas">
+          <div class="section-heading reveal">
+            <p class="eyebrow" data-i18n="docsCuentas">Cuentas</p>
+            <h2 data-i18n="docsCuentas">Modos de inicio de sesión</h2>
+          </div>
+          <div class="card-grid">
+            <article class="feature-card reveal">
+              <span class="card-icon">✔️</span>
+              <h3 data-i18n="docsCuentasOffline">Offline — Recomendado</h3>
+              <p data-i18n="docsCuentasOfflineDesc">Crea una cuenta con cualquier nickname. No requiere registro. Activado por defecto.</p>
+            </article>
+            <article class="feature-card reveal">
+              <span class="card-icon">⏳</span>
+              <h3 data-i18n="docsCuentasMicrosoft">Microsoft — Próximamente</h3>
+              <p data-i18n="docsCuentasMicrosoftDesc">Soporte para cuentas Microsoft en desarrollo.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="section" id="docs-plataformas">
+          <div class="section-heading compact reveal">
+            <p class="eyebrow" data-i18n="docsPlataformas">Plataformas</p>
+            <h2 data-i18n="docsPlataformasTitle">Compatibilidad</h2>
+          </div>
+          <div class="docs-table-wrapper reveal">
+            <table class="docs-table">
+              <thead>
+                <tr><th>Plataforma</th><th>x86-64</th><th>ARM64</th><th>RISC-V</th><th>LoongArch</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>Windows</td><td>✅</td><td>✅</td><td>-</td><td>-</td></tr>
+                <tr><td>Linux</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td></tr>
+                <tr><td>macOS</td><td>✅</td><td>✅</td><td>-</td><td>-</td></tr>
+                <tr><td>FreeBSD</td><td>✅</td><td>❔</td><td>-</td><td>-</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
       </div>
     </section>
 
@@ -239,11 +800,11 @@
           <span>Papi Launcher</span>
         </a>
         <div class="footer-links">
-          <a href="#">GitHub</a>
-          <a href="#">Discord</a>
-          <a href="#">YouTube</a>
+          <a href="https://github.com/endersan17/papi-launcher" target="_blank">GitHub</a>
+          <a href="https://discord.gg/xvHtwE7QUv" target="_blank">Discord</a>
+          <a href="https://www.youtube.com/@papilauncher" target="_blank">YouTube</a>
         </div>
-        <p>&copy; <span id="year"></span> Papi Launcher. Código abierto para la comunidad.</p>
+        <p>&copy; <span id="year"></span> Papi Launcher · <span data-i18n="footerCredits"><strong>endersan17</strong> (creador del fork) · <strong>huanghongxun</strong> (creador de HMCL)</span>. <span data-i18n="footerText">Código abierto.</span></p>
       </div>
     </footer>
 
