@@ -273,7 +273,7 @@ const translations = {
     downloadTitle: "Download PAPI LAUNCHER",
     downloadDesc: "Choose the version that matches your operating system.",
     dlWindowsTitle: "Windows",
-    dlWindowsSub: ".exe Executable",
+    dlWindowsSub: "Executable .exe",
     dlWindowsBtn: "Download .exe",
     dlLinuxMacTitle: "Linux / macOS",
     dlLinuxMacSub: ".sh Script",
