@@ -2003,3 +2003,61 @@ h2 {
     transition-duration: 0.01ms !important;
   }
 }
+
+/* ─── Java Warning Banner ──────────────────────────────────── */
+.java-warning-banner {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: rgba(255, 160, 0, 0.12);
+  border: 1.5px solid rgba(255, 160, 0, 0.55);
+  border-radius: 12px;
+  padding: 14px 20px;
+  margin-bottom: 28px;
+  flex-wrap: wrap;
+}
+
+.java-warning-icon {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.java-warning-text {
+  flex: 1;
+  min-width: 160px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  color: #fff;
+}
+
+.java-warning-text strong {
+  color: #ffa500;
+  font-size: 0.85rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.java-warning-text span {
+  font-size: 0.95rem;
+  opacity: 0.9;
+}
+
+.java-install-btn {
+  display: inline-block;
+  padding: 9px 18px;
+  background: #ffa500;
+  color: #000;
+  font-weight: 700;
+  font-size: 0.85rem;
+  border-radius: 8px;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background 0.2s, transform 0.15s;
+  flex-shrink: 0;
+}
+
+.java-install-btn:hover {
+  background: #ffb733;
+  transform: translateY(-1px);
+}

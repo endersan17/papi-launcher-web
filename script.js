@@ -15,6 +15,12 @@ const translations = {
     heroPill3: "📦 Contenedores",
     downloadBtn: "Descargar",
     githubBtn: "GitHub",
+    docsBtn: "Ver Documentación",
+    
+    // Java warning
+    javaWarningTitle: "IMPORTANTE",
+    javaWarningDesc: "Se necesita Java 11+ para abrir el launcher.",
+    javaInstallBtn: "Instalar Java 11+ (.msi)",
     
     // Vista previa
     previewEyebrow: "Vista previa del Launcher",
@@ -192,6 +198,12 @@ const translations = {
     heroPill3: "📦 Containers",
     downloadBtn: "Download",
     githubBtn: "GitHub",
+    docsBtn: "View Documentation",
+    
+    // Java warning
+    javaWarningTitle: "IMPORTANT",
+    javaWarningDesc: "Java 11+ is required to open the launcher.",
+    javaInstallBtn: "Install Java 11+ (.msi)",
     
     // Preview
     previewEyebrow: "Launcher Preview",
